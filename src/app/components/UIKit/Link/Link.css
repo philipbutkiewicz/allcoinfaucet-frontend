@@ -1,0 +1,55 @@
+/* 
+Ichigo UIKit v1.2.1
+Copyright (c) 2017 by Philip Butkiewicz aka. bagnz0r
+
+----------------------
+<http://philipbutkiewicz.pl/ichigo-uikit>
+----------------------
+
+This file is part of Ichigo UIKit.
+
+Ichigo UIKit is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License.
+
+Ichigo UIKit is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+.link {
+    margin: 4px 0;
+}
+
+.link a {
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow';
+    font-weight: bold;
+
+    color: var(--base-5);
+
+    cursor: pointer;
+    outline: none;
+
+    transition: all .125s ease-in-out;
+
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: var(--accent-5);
+    text-decoration: underline;
+}
+
+.link a:active {
+    color: var(--base-7);
+}
+
+.link a i {
+    margin-right: 6px !important;
+}

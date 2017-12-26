@@ -1,0 +1,44 @@
+/*
+All Coin Faucet v1.0.0
+Copyright (c) 2017 by Philip Butkiewicz aka. bagnz0r
+
+----------------------
+<http://allcoinfaucet.eu>
+----------------------
+
+This file is part of All Coin Faucet.
+
+All Coin Faucet is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License.
+
+All Coin Faucet is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with All Coin Faucet. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+:root {
+  --base-0a: #FFFFFF;
+  --base-0: #FAFAFA;
+  --base-1: #F5F5F5;
+  --base-2: #EEEEEE;
+  --base-3: #E0E0E0;
+  --base-4: #BDBDBD;
+  --base-5: #9E9E9E;
+  --base-6: #757575;
+  --base-7: #616161;
+  --base-8: #424242;
+  --accent-0: #FFEBEE;
+  --accent-1: #FFCDD2;
+  --accent-2: #EF9A9A;
+  --accent-3: #E57373;
+  --accent-4: #EF5350;
+  --accent-5: #F44336;
+  --accent-6: #E53935;
+  --accent-7: #D32F2F;
+  --accent-8: #C62828;
+}

@@ -1,0 +1,64 @@
+/* 
+Ichigo UIKit v1.2.1
+Copyright (c) 2017 by Philip Butkiewicz aka. bagnz0r
+
+----------------------
+<http://philipbutkiewicz.pl/ichigo-uikit>
+----------------------
+
+This file is part of Ichigo UIKit.
+
+Ichigo UIKit is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License.
+
+Ichigo UIKit is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
+.checkbox {
+    margin: 8px 16px 8px 0;
+
+    font-size: 14px;
+    font-family: 'PT Sans Narrow';
+    font-weight: bold;
+
+    color: var(--base-5);
+}
+
+.checkbox::after {
+    clear: both;
+}
+
+.checkBoxInline {
+    display: inline-block;
+}
+
+.checkBoxInner {
+    float: left;
+    margin-right: 4px;
+
+    width: 16px;
+    height: 16px;
+
+    background: var(--base-2);
+
+    border: 1px solid var(--base-3);
+
+    transition: all .125s ease-in-out;
+}
+
+.checkBoxInner:active {
+    transform: scale(0.92);
+}
+
+.checkBoxChecked .checkBoxInner {
+    border: 1px solid var(--accent-6);
+    background: var(--accent-6);
+}

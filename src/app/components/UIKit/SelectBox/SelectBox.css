@@ -1,0 +1,49 @@
+/* 
+Ichigo UIKit v1.2.1
+Copyright (c) 2017 by Philip Butkiewicz aka. bagnz0r
+
+----------------------
+<http://philipbutkiewicz.pl/ichigo-uikit>
+----------------------
+
+This file is part of Ichigo UIKit.
+
+Ichigo UIKit is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License.
+
+Ichigo UIKit is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+.selectBox {
+    margin: 2px 2px 2px 0;
+}
+
+.selectBox select {
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-family: 'PT Sans Narrow';
+
+    color: var(--base-6);
+
+    background: var(--base-0);
+
+    border: 1px solid var(--base-3);
+    
+    outline: none;
+
+    transition: all .125s ease-in-out;
+}
+
+.selectBox select:focus, .selectBox select:active {
+    border: 1px solid var(--accent-6);
+}
