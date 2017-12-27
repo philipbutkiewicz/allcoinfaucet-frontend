@@ -28,7 +28,9 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render((
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+    <div>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </div>
 ), document.getElementById('root'))

@@ -29,6 +29,8 @@ along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
     font-family: 'PT Sans Narrow';
     font-weight: bold;
 
+    border-radius: 3px;
+
     color: var(--base-5);
 }
 

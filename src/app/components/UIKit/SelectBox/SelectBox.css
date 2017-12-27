@@ -22,7 +22,7 @@ along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
 */
 
 .selectBox {
-    margin: 2px 2px 2px 0;
+    margin: 4px 4px 4px 0;
 }
 
 .selectBox select {
@@ -38,6 +38,7 @@ along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
     background: var(--base-0);
 
     border: 1px solid var(--base-3);
+    border-radius: 3px;
     
     outline: none;
 

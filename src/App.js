@@ -21,19 +21,33 @@
 //
 
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 import MainRoute from './app/components/routes/MainRoute';
+import PaymentsRoute from './app/components/routes/PaymentsRoute';
 import AboutRoute from './app/components/routes/AboutRoute';
 
-import './App.css';
+import style from './app.css';
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <Route path="/" component={MainRoute} />
-                <Route path="/about" component={AboutRoute} />
+            <div className={style.app}>
+                <header>
+                    <h1>All Coin Faucet</h1>
+                    <nav>
+                        <ul>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/payments">Payments</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div className={style.container}>
+                    <Route exact path="/" component={MainRoute} />
+                    <Route exact path="/payments" component={PaymentsRoute} />
+                    <Route exact path="/about" component={AboutRoute} />
+                </div>
             </div>
         );
     }

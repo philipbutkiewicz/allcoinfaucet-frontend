@@ -24,3 +24,51 @@ along with All Coin Faucet. If not, see <http://www.gnu.org/licenses/>.
 @import './app/resources/fonts/fonts.css';
 @import './app/resources/colors.css';
 @import './app/resources/typography.css';
+
+.app {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.container {
+    margin: 16px 0;
+}
+
+.app header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app header nav ul li {
+    display: inline-block;
+    margin: 0 2px 0 0;
+}
+
+.app header nav ul li a {
+    display: block;
+
+    color: var(--base-5);
+
+    background: var(--base-0);
+
+    border: 1px solid var(--base-3);
+    border-radius: 3px;
+
+    box-sizing: border-box;
+    padding: 4px 8px;
+
+    text-decoration: none;
+
+    transition: all .125s ease-in-out;
+}
+
+.app header nav ul li a:hover {
+    background: var(--base-2);
+}
+
+.app header nav ul li a:active {
+    border-color: var(--accent-6);
+    background: var(--accent-6);
+    color: var(--base-0);
+}
