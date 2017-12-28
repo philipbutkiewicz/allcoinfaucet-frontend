@@ -20,9 +20,9 @@
     "webpack-dev-server": "^2.9.2"
   },
   "scripts": {
+    "build": "webpack -p",
     "dev": "webpack-dev-server --progress --inline --hot",
-    "lint": "eslint src",
-    "build": "webpack -p"
+    "lint": "eslint src webpack-config.js"
   },
   "devDependencies": {
     "babel-preset-react-hmre": "^1.1.1",
