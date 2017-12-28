@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of All Coin Faucet.
-// 
+//
 // All Coin Faucet is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -22,15 +22,18 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+
 import './index.css';
 import App from './App';
 
-import { BrowserRouter } from 'react-router-dom';
-
-ReactDOM.render((
-    <div>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </div>
-), document.getElementById('root'))
+ReactDOM.render(
+    (
+        <div>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </div>
+    ),
+    document.getElementById('root')
+);

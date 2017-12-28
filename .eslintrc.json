@@ -1,8 +1,15 @@
 {
     "extends": "airbnb",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "plugins": ["mocha", "react"],
     "rules": {
         "comma-dangle": ["error", "never"],
         "indent": ["error", 4],
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+        "react/jsx-indent": ["error", 4],
         "linebreak-style": ["off"]
     }
 }
