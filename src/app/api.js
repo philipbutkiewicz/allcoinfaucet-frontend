@@ -21,7 +21,6 @@
 //
 
 /* eslint-disable */
-
 class Api {
     static init() {
         this.wsUrl = 'http://localhost:9000/app.php';

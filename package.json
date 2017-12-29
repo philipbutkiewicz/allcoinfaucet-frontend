@@ -10,6 +10,7 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
+    "lodash": "^4.17.4",
     "moment": "^2.19.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
