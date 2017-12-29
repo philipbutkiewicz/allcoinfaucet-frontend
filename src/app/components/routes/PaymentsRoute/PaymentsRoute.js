@@ -32,7 +32,7 @@ class PaymentsRoute extends Component {
     render() {
         return (
             <div>
-                Payments page goes here.
+                No payments have been made yet.
             </div>
         );
     }

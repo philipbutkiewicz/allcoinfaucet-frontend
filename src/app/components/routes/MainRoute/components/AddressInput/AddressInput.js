@@ -41,8 +41,12 @@ class AddressInput extends Component {
 
     render() {
         return (
-            <div className={style.currencySelector}>
-                Now, you have to enter your address.
+            <div className={style.addressInput}>
+                <p>
+                    Ok great! You've chosen <b>{this.props.currency.currency.denomination}</b>, great pick!
+                    Now, we need to know where we should send some of that <b>{this.props.currency.currency.denomination}</b>.
+                    Care to enter your wallet address?
+                </p>
                 <TextBox ref={(textBox) => this.textBox = textBox} />
                 <Button onClick={this.onFinishedInput.bind(this)} label="Continue" />
             </div>

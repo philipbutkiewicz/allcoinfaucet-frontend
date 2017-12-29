@@ -57,13 +57,24 @@ class CurrencySelector extends Component {
             );
         });
 
-        return (
-            <div className={style.currencySelector}>
-                Thank you for visiting <b>All Coin Faucet</b>! Let's begin by choosing the currency.
+        const content = this.state.availableCurrencies ? (
+            <div>
+                <p>
+                    Thank you for visiting <b>All Coin Faucet</b>!
+                </p>
+                <p>
+                    Time to get some free coin again, huh? Well then - let us begin by choosing the cryptocurrency you like. Don't worry! Over time there will be much more to choose from!
+                </p>
                 <SelectBox ref={(selectBox) => this.selectBox = selectBox}>
                     {currencies}
                 </SelectBox>
                 <Button onClick={this.onSelectCurrency.bind(this)} label="Continue" />
+            </div>
+        ) : 'No currencies available or the API is not responding.';
+
+        return (
+            <div className={style.currencySelector}>
+                {content}
             </div>
         );
     }

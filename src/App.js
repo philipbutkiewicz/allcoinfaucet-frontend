@@ -48,6 +48,13 @@ class App extends Component {
                     <Route exact path="/payments" component={PaymentsRoute} />
                     <Route exact path="/about" component={AboutRoute} />
                 </div>
+                <footer>
+                    Copyright &copy; 2017 by <a href="http://github.com/philipbutkiewicz">bagnz0r</a> &amp; collaborators. Front-end code is licensed under GPLv3 and available <a href="http://github.com/allcoinfaucet-frontend">here</a>.
+                    <div className={style.donations}>
+                        <b>Donations</b>
+                        <small>WmtxqenvZofexUXKMLu2C4KZuH6snh3V5RHhpyGkAjrHEgRduJJubm2756byc2gSFb38QginqGzQGFVCEeg54r4B1JoM9kn2y</small> (AEON)
+                    </div>
+                </footer>
             </div>
         );
     }

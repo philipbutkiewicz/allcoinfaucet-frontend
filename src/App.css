@@ -72,3 +72,21 @@ along with All Coin Faucet. If not, see <http://www.gnu.org/licenses/>.
     background: var(--accent-6);
     color: var(--base-0);
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+}
+
+a {
+    color: var(--accent-6);
+}
+
+.donations {
+    margin: 16px 0;
+}
+
+.donations b {
+    display: block;
+}

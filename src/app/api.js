@@ -50,7 +50,9 @@ class Api {
             return response.json().then((json) => {
                 callback(json);
             });
-        })
+        }).catch((error) => {
+            callback(false);
+        });
     }
 }
 

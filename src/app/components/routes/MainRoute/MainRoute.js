@@ -64,10 +64,9 @@ class MainRoute extends Component {
         Api.claim(this.state.currency.currency.denomination, this.state.address, (response) => {
             this.setState({
                 complete: true,
-                error: !response.success,
-                msg: response.msg
+                error: !response || !response.success,
+                msg: !response ? 'Uknown API error has occurred.' : response.msg
             });
-            
         });
     }
 
