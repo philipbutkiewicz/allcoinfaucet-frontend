@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of All Coin Faucet.
-// 
+//
 // All Coin Faucet is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -20,8 +20,9 @@
 // along with All Coin Faucet. If not, see <http://www.gnu.org/licenses/>.
 //
 
-class Api {
+/* eslint-disable */
 
+class Api {
     static init() {
         this.wsUrl = 'http://localhost:9000/app.php';
     }
@@ -50,7 +51,7 @@ class Api {
             return response.json().then((json) => {
                 callback(json);
             });
-        }).catch((error) => {
+        }).catch(() => {
             callback(false);
         });
     }

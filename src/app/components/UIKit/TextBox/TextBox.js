@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -20,11 +20,13 @@
 // along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
 //
 
+/* eslint-disable */
+
 import React, { Component } from 'react';
 
 import styles from './TextBox.css';
 
-export default class TextBox extends Component {
+class TextBox extends Component {
 
     getValue() {
         return this.input.value;
@@ -35,7 +37,7 @@ export default class TextBox extends Component {
             <div className={styles.textBox}>
                 <input
                     type="text"
-                    ref={(input) => this.input = input }
+                    ref={input => this.input = input }
                     {...this.props}
                 />
             </div>
@@ -43,3 +45,5 @@ export default class TextBox extends Component {
     }
 
 }
+
+export default TextBox;

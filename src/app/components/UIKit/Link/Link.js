@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -23,8 +23,7 @@
 import React, { Component } from 'react';
 import styles from './Link.css';
 
-export default class Link extends Component {
-
+class Link extends Component {
     render() {
         const icon = this.props.icon ? <i className={`fa ${this.props.icon}`} /> : '';
         return (
@@ -36,7 +35,6 @@ export default class Link extends Component {
             </div>
         );
     }
-
 }
 
 Link.defaultProps = {
@@ -47,5 +45,7 @@ Link.propTypes = {
     icon: React.PropTypes.string,
     label: React.PropTypes.string.isRequired,
     onClick: React.PropTypes.func.isRequired,
-    href: React.PropTypes.string
+    href: React.PropTypes.string.isRequired
 };
+
+export default Link;

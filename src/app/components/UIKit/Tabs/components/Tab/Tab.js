@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -26,7 +26,6 @@ import cx from 'classnames';
 import styles from './Tab.css';
 
 class Tab extends Component {
-
     onClick() {
         this.props.onClick(this.props.id);
     }
@@ -37,12 +36,11 @@ class Tab extends Component {
         }]);
 
         return (
-            <div className={classNames} onClick={this.onClick.bind(this)}>
+            <div className={classNames} onClick={this.onClick.bind(this)} role="button">
                 {this.props.label}
             </div>
         );
     }
-
 }
 
 Tab.defaultProps = {
@@ -50,13 +48,13 @@ Tab.defaultProps = {
     onClick: () => {
         console.warn('Event unhandled: Tab onClick');
     }
-}
+};
 
 Tab.propTypes = {
     id: React.PropTypes.string.isRequired,
     label: React.PropTypes.string.isRequired,
     isActive: React.PropTypes.bool,
-    onClick: React.PropTypes.func,
+    onClick: React.PropTypes.func
 };
 
 export default Tab;

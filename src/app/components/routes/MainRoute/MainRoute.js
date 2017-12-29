@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of All Coin Faucet.
-// 
+//
 // All Coin Faucet is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -31,7 +31,6 @@ import Api from '../../../api';
 import style from './MainRoute.css';
 
 class MainRoute extends Component {
-
     constructor(props) {
         super(props);
 
@@ -56,7 +55,7 @@ class MainRoute extends Component {
 
     onFinishedAddressInput(address) {
         this.setState({
-            address: address
+            address
         });
     }
 
@@ -81,15 +80,15 @@ class MainRoute extends Component {
 
         const addressInput = !this.state.address && this.state.currency ? (
             <AddressInput currency={this.state.currency} onFinishedInput={this.onFinishedAddressInput.bind(this)} />
-        ): '';
+        ) : '';
 
         const continueBlock = this.state.currency && this.state.address && !this.state.complete ? (
             <div>
-                That's it! Now all you need to do is to complete the captcha and hit that "Claim" button!
+                That&#39;s it! Now all you need to do is to complete the captcha and hit that &quot;Claim&quot; button!
                 <Button onClick={this.onContinueClick.bind(this)} label="Claim" />
             </div>
         ) : '';
-        
+
         const completeBlock = this.state.complete ? (
             <div>
                 <div className={this.state.error ? style.error : style.success}>{this.state.msg}</div>

@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -23,8 +23,7 @@
 import React, { Component } from 'react';
 import styles from './Button.css';
 
-export default class Button extends Component {
-
+class Button extends Component {
     render() {
         const icon = this.props.icon ? <i className={`fa ${this.props.icon}`} /> : '';
         return (
@@ -34,7 +33,6 @@ export default class Button extends Component {
             </button>
         );
     }
-
 }
 
 Button.defaultProps = {
@@ -46,3 +44,5 @@ Button.propTypes = {
     label: React.PropTypes.string.isRequired,
     onClick: React.PropTypes.func.isRequired
 };
+
+export default Button;

@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of All Coin Faucet.
-// 
+//
 // All Coin Faucet is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -29,7 +29,6 @@ import SelectBox from '../../../../UIKit/SelectBox';
 import style from './CurrencySelector.css';
 
 class CurrencySelector extends Component {
-
     constructor(props) {
         super(props);
 
@@ -51,11 +50,7 @@ class CurrencySelector extends Component {
     }
 
     render() {
-        const currencies = Object.keys(this.state.availableCurrencies).map((value, index) => {
-            return (
-                <option value={value} key={index}>{value}</option>
-            );
-        });
+        const currencies = Object.keys(this.state.availableCurrencies).map(value => <option value={value} key={value}>{value}</option>);
 
         const content = this.state.availableCurrencies ? (
             <div>
@@ -63,9 +58,10 @@ class CurrencySelector extends Component {
                     Thank you for visiting <b>All Coin Faucet</b>!
                 </p>
                 <p>
-                    Time to get some free coin again, huh? Well then - let us begin by choosing the cryptocurrency you like. Don't worry! Over time there will be much more to choose from!
+                    Time to get some free coin again, huh? Well then - let us begin by choosing the cryptocurrency you like. Don&#39;t worry!
+                    Over time there will be much more to choose from!
                 </p>
-                <SelectBox ref={(selectBox) => this.selectBox = selectBox}>
+                <SelectBox ref={selectBox => this.selectBox = selectBox}>
                     {currencies}
                 </SelectBox>
                 <Button onClick={this.onSelectCurrency.bind(this)} label="Continue" />
@@ -78,11 +74,10 @@ class CurrencySelector extends Component {
             </div>
         );
     }
-
 }
 
 CurrencySelector.propTypes = {
     onSelectCurrency: React.PropTypes.func.isRequired
-}
+};
 
 export default CurrencySelector;

@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -24,8 +24,7 @@ import React, { Component } from 'react';
 
 import styles from './SelectBox.css';
 
-export default class SelectBox extends Component {
-
+class SelectBox extends Component {
     getValue() {
         return this.select.value;
     }
@@ -33,11 +32,16 @@ export default class SelectBox extends Component {
     render() {
         return (
             <div className={styles.selectBox}>
-                <select {...this.props} ref={(select) => this.select = select}>
+                <select {...this.props} ref={select => this.select = select}>
                     {this.props.children}
                 </select>
             </div>
         );
     }
-
 }
+
+SelectBox.propTypes = {
+    children: React.PropTypes.any.isRequired
+};
+
+export default SelectBox;

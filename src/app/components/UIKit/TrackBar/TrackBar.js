@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -20,17 +20,17 @@
 // along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
 //
 
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styles from './TrackBar.css';
 
-export default class TrackBar extends Component {
-
+class TrackBar extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            value: props.value,
             style: {
                 width: '0%'
             },
@@ -41,7 +41,6 @@ export default class TrackBar extends Component {
 
     componentWillReceiveProps(props) {
         this.setState({
-            value: props.value,
             style: {
                 width: props.value ? `${Math.round(props.value * 100)}%` : 0
             }
@@ -90,10 +89,6 @@ export default class TrackBar extends Component {
         const rect = ReactDOM.findDOMNode(this.refs.trackBar).getBoundingClientRect();
         const val = Math.round((offsetX / rect.width) * 100) / 100;
 
-        this.setState({
-            value: val
-        });
-
         if (this.props.onChange) {
             this.props.onChange(val);
         }
@@ -131,3 +126,5 @@ TrackBar.propTypes = {
     value: React.PropTypes.number,
     onChange: React.PropTypes.func
 };
+
+export default TrackBar;

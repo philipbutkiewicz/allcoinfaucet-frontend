@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -20,31 +20,20 @@
 // along with Ichigo UIKit. If not, see <http://www.gnu.org/licenses/>.
 //
 
+/* eslint-disable */
+
 import React, { Component } from 'react';
 
 import Tab from './components/Tab';
 import styles from './Tabs.css';
 
-export default class Tabs extends Component {
-
+class Tabs extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            activeTabId: null
-        };
-    }
-
-    componentDidMount() {
-        this.setState({
             activeTabId: this.getFirstTabId()
-        });
-    }
-
-    getFirstTabId() {
-        const child = this.props.children.find((child) => child.props.isActive);
-        
-        return child ? child.props.id : null;
+        };
     }
 
     onTabClick(id) {
@@ -52,6 +41,13 @@ export default class Tabs extends Component {
             activeTabId: id
         });
     }
+
+    getFirstTabId() {
+        const child = this.props.children.find(item => item.props.isActive);
+
+        return child ? child.props.id : null;
+    }
+
 
     render() {
         const tabs = React.Children.map(this.props.children, (child) => {
@@ -65,7 +61,7 @@ export default class Tabs extends Component {
             );
         });
 
-        const tabContent = this.state.activeTabId ? this.props.children.find((child) => child.props.id === this.state.activeTabId).props.children : null;
+        const tabContent = this.state.activeTabId ? this.props.children.find(child => child.props.id === this.state.activeTabId).props.children : null;
 
         return (
             <div className={styles.tabs}>
@@ -76,5 +72,10 @@ export default class Tabs extends Component {
             </div>
         );
     }
-
 }
+
+Tabs.propTypes = {
+    children: React.PropTypes.any.isRequired
+};
+
+export default Tabs;

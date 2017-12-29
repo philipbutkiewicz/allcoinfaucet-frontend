@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of Ichigo UIKit.
-// 
+//
 // Ichigo UIKit is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -24,8 +24,7 @@ import React, { Component } from 'react';
 
 import styles from './CheckBox.css';
 
-export default class CheckBox extends Component {
-
+class CheckBox extends Component {
     constructor(props) {
         super(props);
 
@@ -56,13 +55,12 @@ export default class CheckBox extends Component {
         const classNames = `${styles.checkBox} ${this.state.checked ? styles.checkBoxChecked : ''} ${this.props.isInline ? styles.checkBoxInline : ''}`;
 
         return (
-            <div className={classNames} onClick={this.onClick.bind(this)}>
-                <div className={styles.checkBoxInner} />
+            <div className={classNames}>
+                <button className={styles.checkBoxInner} onClick={this.onClick.bind(this)} />
                 {this.props.label}
             </div>
         );
     }
-
 }
 
 CheckBox.defaultProps = {
@@ -80,3 +78,5 @@ CheckBox.propTypes = {
     onChecked: React.PropTypes.func,
     onUnChecked: React.PropTypes.func
 };
+
+export default CheckBox;

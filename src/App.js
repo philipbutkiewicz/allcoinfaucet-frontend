@@ -6,7 +6,7 @@
 // ----------------------
 //
 // This file is part of All Coin Faucet.
-// 
+//
 // All Coin Faucet is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License.
@@ -27,7 +27,7 @@ import MainRoute from './app/components/routes/MainRoute';
 import PaymentsRoute from './app/components/routes/PaymentsRoute';
 import AboutRoute from './app/components/routes/AboutRoute';
 
-import style from './app.css';
+import style from './App.css';
 
 class App extends Component {
     render() {
@@ -49,7 +49,8 @@ class App extends Component {
                     <Route exact path="/about" component={AboutRoute} />
                 </div>
                 <footer>
-                    Copyright &copy; 2017 by <a href="http://github.com/philipbutkiewicz">bagnz0r</a> &amp; collaborators. Front-end code is licensed under GPLv3 and available <a href="http://github.com/allcoinfaucet-frontend">here</a>.
+                    Copyright &copy; 2017 by <a href="http://github.com/philipbutkiewicz">bagnz0r</a> &amp; collaborators.
+                    Front-end code is licensed under GPLv3 and available <a href="http://github.com/allcoinfaucet-frontend">here</a>.
                     <div className={style.donations}>
                         <b>Donations</b>
                         <small>WmtxqenvZofexUXKMLu2C4KZuH6snh3V5RHhpyGkAjrHEgRduJJubm2756byc2gSFb38QginqGzQGFVCEeg54r4B1JoM9kn2y</small> (AEON)
