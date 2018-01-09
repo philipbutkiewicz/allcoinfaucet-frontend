@@ -23,6 +23,8 @@
   },
   "scripts": {
     "build": "webpack -p",
+    "build:css": "./node_modules/node-sass-chokidar/bin/node-sass-chokidar src/ -o src/",
+    "watch:css": "yarn build:css && ./node_modules/node-sass-chokidar/bin/node-sass-chokidar src/ -o src/ --watch --recursive",
     "dev": "webpack-dev-server --progress --inline --hot",
     "lint": "eslint src webpack-config.js"
   },
@@ -35,6 +37,7 @@
     "eslint-plugin-mocha": "^4.11.0",
     "eslint-plugin-react": "^7.5.1",
     "node-sass": "^4.7.2",
+    "node-sass-chokidar": "^0.0.3",
     "sass-loader": "^6.0.6"
   }
 }
