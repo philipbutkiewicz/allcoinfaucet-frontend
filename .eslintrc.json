@@ -6,6 +6,7 @@
     },
     "plugins": ["mocha", "react"],
     "rules": {
+        "quotes": ["error", "single", { "allowTemplateLiterals": true  }],
         "comma-dangle": ["error", "never"],
         "indent": ["error", 4],
         "jsx-a11y/anchor-is-valid": [
